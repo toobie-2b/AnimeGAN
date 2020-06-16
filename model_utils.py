@@ -41,22 +41,26 @@ class Generator(nn.Module):
         super(Generator, self).__init__()
         
         self.model = nn.Sequential(
-            nn.ConvTranspose2d(100, 1024, kernel_size=4, stride=1, padding=0),
-            nn.BatchNorm2d(1024),
-            nn.LeakyReLU(),
-            nn.ConvTranspose2d(1024, 512, kernel_size=4, stride=2, padding=1),
-            nn.BatchNorm2d(512),
-            nn.LeakyReLU(),
-            nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
-            nn.BatchNorm2d(256),
-            nn.LeakyReLU(),
-            nn.ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1),
-            nn.BatchNorm2d(128),
-            nn.LeakyReLU(),
-            nn.ConvTranspose2d(128, 3, kernel_size=4, stride=2, padding=1),
-            nn.Tanh()
+                nn.ConvTranspose2d(100, 1024, kernel_size=4, stride=1, padding=0),
+                nn.BatchNorm2d(1024),
+                nn.ReLU(),
+                nn.ConvTranspose2d(1024, 512, kernel_size=4, stride=2, padding=1),
+                nn.BatchNorm2d(512),
+                nn.ReLU(),
+                nn.ConvTranspose2d(512, 256, kernel_size=4, stride=2, padding=1),
+                nn.BatchNorm2d(256),
+                nn.ReLU(),
+                nn.ConvTranspose2d(256, 128, kernel_size=4, stride=2, padding=1),
+                nn.BatchNorm2d(128),
+                nn.ReLU(),
+                nn.ConvTranspose2d(128, 3, kernel_size=4, stride=2, padding=1),
+                nn.Tanh(),
             )
 
     def forward(self, x):
         return self.model(x)
         
+
+if __name__ == '__main__':
+    model = Discriminator()
+    print(model(torch.randn(1, 3, 64, 64)).reshape(-1).shape)
