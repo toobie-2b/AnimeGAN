@@ -22,5 +22,8 @@ def save_anime(images):
 
 if __name__ == '__main__':
     model = load_model()
+    print('Generating Characters...')
     images = generate(model)
+    print('Saving Characters...')
     save_anime(images)
+    print('Done')
