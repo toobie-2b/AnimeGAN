@@ -18,7 +18,7 @@ The model can be trained using `main.py` and below are the arguments accepted by
 >`--seed`: (Optional) Set the value of seed manually to reproduce the results for an experiment.
 
 The dataset which is used for this fun project was [Anime Faces](https://www.kaggle.com/soumikrakshit/anime-faces)  
-Here's a preview of some images from the training data.
+Here's a preview of some images from the training data.  
 ![Original Images](./ims/original.png)
 
 Thanks to *GAN hacks by Soumith Chintala* (The repo can be found [here](https://www.github.com/soumith/ganhacks)) which made it much easier to train the model and help me learn many things.  
