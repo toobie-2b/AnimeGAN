@@ -17,7 +17,7 @@ The model can be trained using `main.py` and below are the arguments accepted by
 >`--continue`: (Optional: *default False*) Set this as **True** if you want continue training the model.  
 >`--seed`: (Optional) Set the value of seed manually to reproduce the results for an experiment.
 
-The dataset which is used for this fun project was [Anime Faces](https://www.kaggle.com/soumikrakshit/anime-faces)
+The dataset which is used for this fun project was [Anime Faces](https://www.kaggle.com/soumikrakshit/anime-faces)  
 Here's a preview of some images from the training data.
 ![Original Images](./ims/original.png)
 
