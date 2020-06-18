@@ -30,7 +30,6 @@ def load_model():
 
 def generate(model, num_images):
     images = model(torch.randn(num_images, 100, 1, 1))
-    # pics.append(images.detach().numpy())
     return images.detach().numpy()
 
 def save_anime(path, images):
