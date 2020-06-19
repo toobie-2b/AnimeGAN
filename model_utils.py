@@ -59,8 +59,3 @@ class Generator(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-        
-
-if __name__ == '__main__':
-    model = Discriminator()
-    print(model(torch.randn(1, 3, 64, 64)).reshape(-1).shape)
