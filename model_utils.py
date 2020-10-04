@@ -59,3 +59,7 @@ class Generator(nn.Module):
 
     def forward(self, x):
         return self.model(x)
+
+def modified_g_loss(fake_output, eps=1e-6):
+    loss = (fake_output + eps).log().mean()
+    return loss.neg()
