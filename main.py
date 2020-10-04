@@ -4,7 +4,7 @@ import torch.optim as optim
 from torchvision import transforms, datasets
 import argparse
 import random
-from model_utils import Discriminator, Generator, apply_weights
+from model_utils import Discriminator, Generator, apply_weights, modified_g_loss
 
 def get_arguments():
     parser = argparse.ArgumentParser()
@@ -102,8 +102,9 @@ def train(netD, netG, dataloader, num_epochs, device, check=False):
 
             optimizerG.zero_grad()
             output = netD(fake).reshape(-1)
-            labels = torch.ones(images.shape[0]).to(device)
-            lossG = criterion(output, labels)
+            # labels = torch.ones(images.shape[0]).to(device)
+            # lossG = criterion(output, labels)
+            lossG = modified_g_loss(output)
             lossG.backward()
             optimizerG.step()
 
