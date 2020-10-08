@@ -36,6 +36,7 @@ def save_anime(path, images):
     for i in range(len(images)):
         anime = images[i].reshape(3, 64, 64)
         anime = np.moveaxis(anime, 0, 2)
+        anime = anime * np.array((0.5, 0.5, 0.5)) + np.array((0.5,0.5,0.5))
         anime = np.clip(anime, 0, 1)
         plt.imsave(path + f'character{i+1}.png', anime)
 
