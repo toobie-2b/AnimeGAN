@@ -23,4 +23,4 @@ The dataset which is used for this fun project was [Anime Faces](https://www.kag
 
 Thanks to *GAN hacks by Soumith Chintala* (The repo can be found [here](https://www.github.com/soumith/ganhacks)) which made it much easier to train the model and help me learn many things.  
 
-Also to Aladdin Persson's [YouTube Channel](https://www.youtube.com/channel/UCkzW5JSFwvKRjXABI-UTAkQ) which helped me to learn implement the code.
+Also to Aladdin Persson's [YouTube Channel](https://www.youtube.com/channel/UCkzW5JSFwvKRjXABI-UTAkQ) which helped me to learn implement the code...
